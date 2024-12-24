@@ -2,8 +2,6 @@ import 'package:equatable/equatable.dart';
 
 abstract class RegistrationState extends Equatable {}
 
-
-
 class InitialStep extends RegistrationState {
   @override
   List<Object?> get props => [];
