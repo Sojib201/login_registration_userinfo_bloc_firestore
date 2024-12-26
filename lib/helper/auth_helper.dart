@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:login_registration_userinfo_bloc_firebase/views/loginScreen.dart';
+import 'package:login_registration_userinfo_bloc_firebase/views/userInfo.dart';
 
 
-import '../userInfo/userInfo.dart';
 
 class AuthHelper {
   final box = GetStorage();

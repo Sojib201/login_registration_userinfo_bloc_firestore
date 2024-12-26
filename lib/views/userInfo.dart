@@ -17,12 +17,13 @@ class UserInfoScreen extends StatelessWidget {
           IconButton(
             onPressed: () {
               StorageService.clearStorage();
-              //Navigator.pop(context);
+              Navigator.pop(context);
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
-                  ));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LoginScreen(),
+                ),
+              );
             },
             icon: const Icon(Icons.logout),
           ),

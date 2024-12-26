@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:login_registration_userinfo_bloc_firebase/userInfo/userInfo.dart';
 import 'package:login_registration_userinfo_bloc_firebase/utils/style.dart';
 import 'package:login_registration_userinfo_bloc_firebase/views/registrationScreen.dart';
+import 'package:login_registration_userinfo_bloc_firebase/views/userInfo.dart';
 
 import '../bloc/login/login_bloc.dart';
 import '../bloc/login/login_event.dart';
@@ -80,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 );
               },
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 15),
 
             // ElevatedButton(
             //   onPressed: () {

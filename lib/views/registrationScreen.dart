@@ -7,9 +7,6 @@ import 'package:login_registration_userinfo_bloc_firebase/utils/style.dart';
 
 import 'loginScreen.dart';
 
-
-
-
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
 
@@ -121,13 +118,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text(state.message)),
                     );
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) =>
-                    //         const LoginScreen(), // Replace LoginScreen with your actual login screen widget
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const LoginScreen(),
+                      ),
+                    );
                   } else if (state is SignUpFailure) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text(state.error)),
@@ -161,6 +158,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   );
                 },
               ),
+              SizedBox(height: 15,),
               Container(
                 alignment: Alignment.center,
                 child: Column(
