@@ -10,39 +10,12 @@ const colorDarkBlue = Color.fromRGBO(44, 62, 80, 1.0);
 const colorLightGray = Color.fromRGBO(135, 142, 150, 1.0);
 const colorLight = Color.fromRGBO(211, 211, 211, 1.0);
 
-TextStyle Head1Text(textColor) {
-  return TextStyle(
-    color: textColor,
-    fontSize: 28,
-    fontFamily: 'popins',
-    fontWeight: FontWeight.w700,
-  );
-}
-
-TextStyle Head6Text(textColor) {
-  return TextStyle(
-    color: textColor,
-    fontSize: 16,
-    fontFamily: 'popins',
-    fontWeight: FontWeight.w400,
-  );
-}
-
 TextStyle HeadText7(textColor) {
   return TextStyle(
     color: textColor,
     fontSize: 13,
     fontFamily: 'popins',
-    fontWeight: FontWeight.w400,
-  );
-}
-
-TextStyle HeadText9(textColor) {
-  return TextStyle(
-    color: textColor,
-    fontSize: 9,
-    fontFamily: 'popins',
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.bold,
   );
 }
 
@@ -80,13 +53,15 @@ ButtonStyle AppButtonStyle() {
 
 TextStyle ButtonTextStyle() {
   return TextStyle(
-      fontSize: 14, fontFamily: 'poppins', fontWeight: FontWeight.w400);
+      fontSize: 14,
+      fontFamily: 'poppins',
+      fontWeight: FontWeight.bold,
+      color: Colors.black);
 }
 
 Ink SuccessButtonChild(String ButtonText) {
   return Ink(
-    decoration: BoxDecoration(
-        color: colorGreen, borderRadius: BorderRadius.circular(6)),
+    decoration: BoxDecoration(borderRadius: BorderRadius.circular(6)),
     child: Container(
       height: 45,
       alignment: Alignment.center,
@@ -95,38 +70,5 @@ Ink SuccessButtonChild(String ButtonText) {
         style: ButtonTextStyle(),
       ),
     ),
-  );
-}
-
-SizedBox ItemSizeBox(child) {
-  return SizedBox(
-    width: double.infinity,
-    child: Container(
-      padding: EdgeInsets.all(10),
-      child: child,
-    ),
-  );
-}
-
-Container StatusChild(statusText, statusColor) {
-  return Container(
-    alignment: Alignment.center,
-    child: Text(statusText,
-        style: TextStyle(
-            color: colorWhite, fontSize: 10, fontWeight: FontWeight.w400)),
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(20),
-      color: statusColor,
-    ),
-    height: 20,
-    width: 60,
-  );
-}
-
-ButtonStyle AppStatusButtonStyle(btnColor) {
-  return ElevatedButton.styleFrom(
-    elevation: 1,
-    padding: EdgeInsets.zero,
-    backgroundColor: btnColor,
   );
 }

@@ -2,9 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:login_registration_userinfo_bloc_firebase/userInfo.dart';
+import 'package:login_registration_userinfo_bloc_firebase/views/loginScreen.dart';
 
-import '../loginScreen.dart';
+
+import '../userInfo/userInfo.dart';
 
 class AuthHelper {
   final box = GetStorage();
@@ -50,7 +51,7 @@ class AuthHelper {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => userInfo(),
+            builder: (context) => UserInfoScreen(),
           ),
         );
       } else {
