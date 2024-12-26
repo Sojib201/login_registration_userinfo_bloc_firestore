@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "820203411093",
+    "project_id": "login-registration-bloc-f5f33",
+    "storage_bucket": "login-registration-bloc-f5f33.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820203411093:android:84a99a2254381229db2d9c",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1B0LSZI7fl5F6Xv7g-bkfJhsrMq20lPc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
