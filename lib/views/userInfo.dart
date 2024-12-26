@@ -34,14 +34,22 @@ class UserInfoScreen extends StatelessWidget {
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Name: ${userInfo['name']}',
-                      style: const TextStyle(fontSize: 18)),
-                  Text('Phone: ${userInfo['phone']}',
-                      style: const TextStyle(fontSize: 18)),
-                  Text('Age: ${userInfo['age']}',
-                      style: const TextStyle(fontSize: 18)),
-                  Text('UserType: ${userInfo['dropDown']}',
-                      style: const TextStyle(fontSize: 18)),
+                  Text(
+                    'Name: ${userInfo['name']}',
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                  Text(
+                    'Phone: ${userInfo['phone']}',
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                  Text(
+                    'Age: ${userInfo['age']}',
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                  Text(
+                    'UserType: ${userInfo['dropDown']}',
+                    style: const TextStyle(fontSize: 18),
+                  ),
                 ],
               )
             : const Text(
