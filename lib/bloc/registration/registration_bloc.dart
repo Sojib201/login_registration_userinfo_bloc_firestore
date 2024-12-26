@@ -32,6 +32,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
           email: event.email,
           password: event.password,
         );
+        _storage.write('isLoggedIn', true);
         _storage.write('uid', user.user?.uid);
         StorageService.saveUserInfo({
           'name': event.name,

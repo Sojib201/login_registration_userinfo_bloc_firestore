@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:login_registration_userinfo_bloc_firebase/views/loginScreen.dart';
 import '../storage_service/storage_service.dart';
 
@@ -9,6 +10,7 @@ class UserInfoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final uid = StorageService.getUid();
     final userInfo = StorageService.getUserInfo();
+    final GetStorage storage = GetStorage();
 
     return Scaffold(
       appBar: AppBar(
@@ -16,14 +18,14 @@ class UserInfoScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              StorageService.clearStorage();
+              //StorageService.clearStorage();
               Navigator.pop(context);
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LoginScreen(),
-                ),
-              );
+              storage.remove('isLoggedIn');
+
+              // Navigate to AuthScreen
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),);
             },
             icon: const Icon(Icons.logout),
           ),
@@ -34,14 +36,22 @@ class UserInfoScreen extends StatelessWidget {
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Name: ${userInfo['name']}',
-                      style: const TextStyle(fontSize: 18)),
-                  Text('Phone: ${userInfo['phone']}',
-                      style: const TextStyle(fontSize: 18)),
-                  Text('Age: ${userInfo['age']}',
-                      style: const TextStyle(fontSize: 18)),
-                  Text('UserType: ${userInfo['dropDown']}',
-                      style: const TextStyle(fontSize: 18)),
+                  Text(
+                    'Name: ${userInfo['name']}',
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                  Text(
+                    'Phone: ${userInfo['phone']}',
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                  Text(
+                    'Age: ${userInfo['age']}',
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                  Text(
+                    'UserType: ${userInfo['dropDown']}',
+                    style: const TextStyle(fontSize: 18),
+                  ),
                 ],
               )
             : const Text(

@@ -18,6 +18,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
           email: event.email,
           password: event.password,
         );
+        _storage.write('isLoggedIn', true);
         _storage.write('uid', user.user?.uid);
         emit(SignInSuccess('Sign-in successful'));
       } catch (e) {
