@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           useMaterial3: true,
         ),
-        home: isLoggedIn ? const UserInfoScreen() : const LoginScreen(),
+        home: isLoggedIn ?  UserInfoScreen() :  LoginScreen(),
 
         //home: AuthScreen(),
 

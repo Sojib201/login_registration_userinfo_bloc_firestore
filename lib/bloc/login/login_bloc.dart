@@ -5,7 +5,6 @@ import 'package:get_storage/get_storage.dart';
 import 'login_event.dart';
 import 'login_state.dart';
 
-
 class SignInBloc extends Bloc<SignInEvent, SignInState> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GetStorage _storage = GetStorage();
